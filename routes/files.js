@@ -47,7 +47,7 @@ router.post('/',(req,res)=>{
     //download link generation
     const response=await file.save();
     //domain name
-    return res.json({ file: `${process.env.APP_BASE_URL}files/${response.uuid}`});
+    return res.json({ file: `${process.env.APP_BASE_URL}/files/${response.uuid}`});
     //http://localhost:3000/files/uuid
 
    });
