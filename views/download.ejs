@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <section class="download" style="font-size:20px; text-align: center; margin:200px 10px 10px 0px;">
+   <img src="/img/logo.png" alt="myShare logo" class="logo">
+    <section class="download">
+        <img class="download__icon" src="/img/down2.png" alt="myshare-download">
         <% if(locals.error){ %>
         <h4><%= locals.error %> 😏</h4>
         <% } else { %>
-        <h2>Download Your File</h2>
+        <h2>Your file is ready to download</h2>
+        <p>Link expires in 24 hours</p>
         <div class="download__meta">
             <h4><%= fileName %></h4>
-            <small>Your File Size is <%= parseInt(fileSize/1000) %> KB</small>
+            <small>You File Size is <%= parseInt(fileSize/1000) %> KB</small>
         </div>
         <div class="send-btn-container">
             <a href="<%= downloadLink %>">Download file</a>
