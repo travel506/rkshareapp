@@ -37,6 +37,9 @@ app.use('/files',require('./routes/show'));
 //download link
 app.use('/files/download',require('./routes/download'));
 
+//Routing for login and signup
+app.use('/api/user',require('./routes/loginSignup'));
+
 
 app.listen(port,()=>{
    console.log("server running at port no - ",port); 
